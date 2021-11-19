@@ -8,30 +8,53 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  /* background-image */
-  /* background: url(https://images.unsplash.com/photo-1481437642641-2f0ae875f836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
-  /* background: url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+body {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* background-image */
+    
+    /* background-image:  
+    linear-gradient(to bottom,  #cbcaa5c7, #334d50bb), 
+    url(https://images.unsplash.com/photo-1588561935000-047155e90925?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2574&q=80); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    */
+
+    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */ 
 
     background: #334d50; 
     background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50); 
-    background: linear-gradient(to bottom, #cbcaa5, #334d50); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
-
+    background: linear-gradient(to bottom, #cbcaa5, #334d50); 
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
 } 
+
+.content {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    height: 600px;
+    padding: 10px 20px;
+    
+    background-image: 
+    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);  */
+    url(https://media.istockphoto.com/photos/let-the-power-of-zen-enlighten-you-picture-id954650740?b=1&k=20&m=954650740&s=170667a&w=0&h=Th878ZqokRzl6Aw_5jBEOSXTRZFpLwzdx6ZKZRSaKNQ=); 
+    background-size: 600px 600px;
+    
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+  }
+
 
 /**
 * ! style rules for form section
@@ -41,47 +64,75 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 400px;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
-    padding: 50px;
+    max-width: 300px;
+    height: 600px;
+    padding: 120px 30px 0px 30px;
     background-color: #fff;
-    border-radius: 10px;
-    opacity: 0.8;
-
-    
-    height: 650px;
+    opacity: 0.7;
+    border-radius: 0 10px 10px 0; 
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
 }
 
 .title {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 20px;
- } 
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -50px;
+    margin-bottom: -150px;
+} 
 
- label{
-     display: block;
-     margin-bottom: 20px;
- }
+.question {
+    font-size: .8rem;
+    margin-top: 90px;
+    margin-bottom: -40px;
+    cursor: pointer;
+} 
 
- form div input{
-     width: 100%;
-     height: 40px;
-     border-radius: 8px;
-     outline: none;
-     border: 2px solid #c4c4c4;
-     padding: 0 40px;
-     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
- }
+.sign-in {
+    color: #192627;
+    font-weight: bold;
+}
 
- form div{
-     position: relative; 
-     height: 100px;
-     margin-bottom: 60px;
- }
+.sign-in-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
 
- input:focus {
-        border: 2px solid #334d50;
- }
+.email, .username{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form div input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 50px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div{
+    position: relative; 
+    height: 100px;
+    margin-bottom: 60px;
+    margin-top: -20px;
+}
+
+input:focus {
+    border: 2px solid #334d50;
+}
 
 /**
 * ! style rules for form icons
@@ -119,9 +170,9 @@ form div i{
 **/
 
 button {
-    margin-top: -40px;
+    margin-top: -50px;
     width: 100%;
-    height: 45px;
+    height: 40px;
     background-color: #334d50;
     border: 2px solid #334d50;
     border-radius: 8px;
@@ -130,8 +181,8 @@ button {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.1s ease;
-    padding: 10px 0px 30px 0px;
-  } 
+    padding: 5px 0px 30px 0px;
+} 
 
     button:hover{
         opacity: 0.8;

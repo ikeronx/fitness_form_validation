@@ -7,23 +7,51 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous"/>
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"/>
-    <script src="main.js" defer></script>
+    <script src="/main.js" defer></script>
     <title>Fitness Trainer Form</title>
 </head>
 <body>
     <div class="container">
+        <div class="content">
+            <div class="logo"> 
+              <img src="https://svgshare.com/i/_go.svg" alt="" /> 
+            </div>
+        </div>
         <form id="form">
+            <!-- social media sign up options -->
+        <div class ='social'> 
             <div class='title'>Get Started</div>
-            <div>
+
+            <div class="question">
+                Already Have an Account? <br>
+                <span class='sign-in'>Log In</span>
+            </div> 
+               <div class='sign-in-btns'>
+                <div class="btn-1">
+                    <img src="https://img.icons8.com/color/30/000000/google-logo.png" />
+                     Sign Up
+                </div>
+                <div class="btn-2">
+                    <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" />
+                    Sign Up
+                </div>
+                </div>
+
+               <!--  
+            </div>
+                <div class="or">Or</div>
+            </div> -->
+        </div> 
+            <div class='username'>
                 <!-- User Name input -->
                 <label for="username">User Name</label>
                 <i class='fas fa-user'></i>
                 <input 
                 type="text" 
-                name="name" 
-                id="name" 
+                name="username" 
+                id="username" 
                 placeholder="Kamali Williams" 
-                required/>
+                />
 
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
@@ -32,7 +60,7 @@
             </div>
 
             <!-- Email input -->
-            <div>
+            <div class='email'>
                 <label for="email">Email</label>
                 <i class='fas fa-envelope'></i>
 
@@ -41,7 +69,7 @@
                 name="email"
                 id="email"
                 placeholder="abc@gmail.com" 
-                required/>
+                />
 
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
@@ -50,7 +78,7 @@
             </div>
 
             <!-- Password input -->
-            <div>
+            <div class='password'>
                 <label for="password">Password</label>
                 <i class='fas fa-lock'></i>
 
@@ -59,7 +87,7 @@
                 name="password"
                 id="password"
                 placeholder="password here" 
-                required/>
+                />
 
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
@@ -68,10 +96,9 @@
             </div>
 
             <!-- submit button -->
-            <button id='btn' type="submit">Submit</button>
+            <div><button id='btn' type="submit">Submit</button></div>
         
         </form>
     </div>
-    
 </body>
 </html>
