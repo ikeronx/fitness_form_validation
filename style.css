@@ -1,0 +1,138 @@
+/**
+* ! changing default styles of browser
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* background-image */
+  /* background: url(https://images.unsplash.com/photo-1481437642641-2f0ae875f836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
+  /* background: url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+
+    background: #334d50; 
+    background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50); 
+    background: linear-gradient(to bottom, #cbcaa5, #334d50); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+} 
+
+/**
+* ! style rules for form section
+**/
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0.8;
+
+    
+    height: 650px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+ } 
+
+ label{
+     display: block;
+     margin-bottom: 20px;
+ }
+
+ form div input{
+     width: 100%;
+     height: 40px;
+     border-radius: 8px;
+     outline: none;
+     border: 2px solid #c4c4c4;
+     padding: 0 40px;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ form div{
+     position: relative; 
+     height: 100px;
+     margin-bottom: 60px;
+ }
+
+ input:focus {
+        border: 2px solid #334d50;
+ }
+
+/**
+* ! style rules for form icons
+**/
+
+form div i{
+    position: absolute;
+    padding: 10px;
+    color: #c4c4c4; 
+}
+
+.failure-icon,
+.error{
+    color: red;
+}
+
+.success-icon{
+    color: green;
+}
+
+.error{
+    font-size: 14.5px;
+    margin-top: 5px;
+}
+
+/* hides success and failure icons */
+.failure-icon,
+.success-icon{
+    right: 0;
+    opacity: 0;
+}
+
+/**
+* ! style rules for submit button
+**/
+
+button {
+    margin-top: -40px;
+    width: 100%;
+    height: 45px;
+    background-color: #334d50;
+    border: 2px solid #334d50;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+    padding: 10px 0px 30px 0px;
+  } 
+
+    button:hover{
+        opacity: 0.8;
+    }
