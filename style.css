@@ -14,18 +14,19 @@ body {
 
     /* background-image */
     
-    /* background-image:  
+    background-image:  
     linear-gradient(to bottom,  #cbcaa5c7, #334d50bb), 
     url(https://images.unsplash.com/photo-1588561935000-047155e90925?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2574&q=80); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;    */
+    background-attachment: fixed;   
 
     /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */ 
 
-    background: #334d50; 
+    /* background: #334d50; 
     background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50); 
-    background: linear-gradient(to bottom, #cbcaa5, #334d50); 
+    background: linear-gradient(to bottom, #cbcaa5, #334d50);  */
+
 }
 
 .container {
@@ -35,7 +36,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    
 } 
 
 .content {
@@ -46,15 +46,15 @@ body {
     padding: 10px 20px;
     
     background-image: 
-    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);  */
-    url(https://media.istockphoto.com/photos/let-the-power-of-zen-enlighten-you-picture-id954650740?b=1&k=20&m=954650740&s=170667a&w=0&h=Th878ZqokRzl6Aw_5jBEOSXTRZFpLwzdx6ZKZRSaKNQ=); 
-    background-size: 600px 600px;
-    
+    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
+    /* url(https://media.istockphoto.com/photos/let-the-power-of-zen-enlighten-you-picture-id954650740?b=1&k=20&m=954650740&s=170667a&w=0&h=Th878ZqokRzl6Aw_5jBEOSXTRZFpLwzdx6ZKZRSaKNQ=);   */
+    url(images/yoga.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
+
     border-radius: 10px 0 0 10px;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
   }
-
 
 /**
 * ! style rules for form section
@@ -64,14 +64,41 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 300px;
+    max-width: none;
     height: 600px;
     padding: 120px 30px 0px 30px;
     background-color: #fff;
-    opacity: 0.7;
+    /* opacity: 0.9; */
     border-radius: 0 10px 10px 0; 
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
 }
+
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form div input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div{
+    position: relative; 
+    height: 100px;
+    margin-bottom: 60px;
+    margin-top: -20px;
+}
+
+input:focus {
+    border: 2px solid #334d50;
+}
+
 
 .title {
     font-size: 25px;
@@ -92,46 +119,55 @@ form {
     font-weight: bold;
 }
 
-.sign-in-btns{
+.sign-up-btns{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     width: 100%;
     height: 0;
-    margin-top: 90px;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 55px;
+}
+
+.btn-1,
+.btn-2 {
+  display: flex;
+  padding: -21px 1px;
+  width: 50%;
+  height: 50px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn-2 {
+    background-color: #4f70b5;
+    color: white;
+}
+
+.or{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: -96px;
+    margin-bottom: -20px;
 }
 
 .email, .username{
     margin-bottom: 20px;
 }
 
-label{
-    display: block;
-    margin-bottom: 10px;
-}
-
-form div input{
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    outline: none;
-    border: 2px solid #c4c4c4;
-    padding: 0 50px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form div{
-    position: relative; 
-    height: 100px;
-    margin-bottom: 60px;
-    margin-top: -20px;
-}
-
-input:focus {
-    border: 2px solid #334d50;
+.password {
+    margin-bottom: 40px;
 }
 
 /**

@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
         // calls the engine function and passes the id and serials of the class names
         // prints an error msg when an error is found when the user click submit
         engine(userName, 0, 'Username cannot be blank');
-        engine(email, 1, 'Email cannot be blank');
+        engine(email, 1, 'Please enter a valid email address');
         engine(password, 2, 'Password cannot be blank');
 });
 
