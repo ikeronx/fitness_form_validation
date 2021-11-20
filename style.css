@@ -13,20 +13,36 @@ body {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     /* background-image */
-    
     background-image:  
-    linear-gradient(to bottom,  #cbcaa5c7, #334d50bb), 
+    linear-gradient(to bottom,  #cbcaa5e8, #334d50e1), 
     url(https://images.unsplash.com/photo-1588561935000-047155e90925?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2574&q=80); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;   
+    background-attachment: fixed;
 
     /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */ 
 
     /* background: #334d50; 
     background: -webkit-linear-gradient(to bottom, #cbcaa5, #334d50); 
-    background: linear-gradient(to bottom, #cbcaa5, #334d50);  */
+    background: linear-gradient(to bottom, #cbcaa5, #334d50);   */
 
+}
+
+h1{
+    margin-top: 0px;
+    /* color: #fff; */
+    font-family: Quicksand, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;  
+    line-height: 0.8;
+    text-align: center;
+    color: #334d50;  
+    height: 0px;
+    padding-left: 15px;
+}
+
+.dojo-text-span{
+    padding-left: 28%;
 }
 
 .container {
@@ -39,21 +55,29 @@ body {
 } 
 
 .content {
-    flex-direction: column;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    
     width: 600px;
     height: 600px;
     padding: 10px 20px;
-    
+
     background-image: 
-    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80); */
-    /* url(https://media.istockphoto.com/photos/let-the-power-of-zen-enlighten-you-picture-id954650740?b=1&k=20&m=954650740&s=170667a&w=0&h=Th878ZqokRzl6Aw_5jBEOSXTRZFpLwzdx6ZKZRSaKNQ=);   */
-    url(images/yoga.jpg);
+    linear-gradient(to bottom, rgba(203, 202, 165, 0), rgba(50, 75, 78, 0.158)),
+
+    /* YOGA HANDS IMAGE */
+    url(images/yoga.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
 
-    border-radius: 10px 0 0 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+    /* YOGA GIRL IMAGE */
+    /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+
+    /* border-radius: 10px 0 0 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1); */
   }
 
 /**
@@ -105,6 +129,7 @@ input:focus {
     font-weight: bold;
     margin-top: -50px;
     margin-bottom: -150px;
+    opacity: 0.65;
 } 
 
 .question {
@@ -119,34 +144,34 @@ input:focus {
     font-weight: bold;
 }
 
-.sign-up-btns{
+.sign-in-btns{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: space-around;
     align-items: center;
+    gap: 15px;
     width: 100%;
     height: 0;
     margin-top: 60px;
     margin-bottom: 55px;
 }
 
-.btn-1,
-.btn-2 {
+.google-btn,
+.facebook-btn {
   display: flex;
-  padding: -21px 1px;
-  width: 50%;
-  height: 50px;
-  gap: 15px;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  padding: 15px;
+  width: 50%;
+  height: 50px;
   border: 2px solid #c4c4c4;
   border-radius: 8px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
-.btn-2 {
+.facebook-btn {
     background-color: #4f70b5;
     color: white;
 }
@@ -205,7 +230,7 @@ form div i{
 * ! style rules for submit button
 **/
 
-button {
+.sign-up-btn {
     margin-top: -50px;
     width: 100%;
     height: 40px;
@@ -220,6 +245,101 @@ button {
     padding: 5px 0px 30px 0px;
 } 
 
-    button:hover{
+    .sign-up-btn:hover{
         opacity: 0.8;
     }
+
+/**
+* ! style rules for modal
+**/
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 55%;
+
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 3.5rem;
+    margin: 5rem 2rem;
+    border: none;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.close-modal {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    
+    top: 0.1rem;
+    right: .5rem;
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    opacity: 0.0;
+}
+
+.modal-tick-icon{
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    margin-bottom: 1rem;
+    border: none;
+    background: none;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+
+}
+
+.modal-message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: .8rem;
+    opacity: 0.7;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+    /* display: none; */
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+

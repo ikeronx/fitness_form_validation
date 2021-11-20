@@ -6,38 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous"/>
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
     <title>Yoga Doja Validation Form</title>
 </head>
 <body>
     <div class="container">
         <div class="content">
-            <div class="logo"> 
+            <h1>yoga <br> <span class='dojo-text-span'>dojo.</span> </h1>
+            <!-- <div class="logo"> 
               <img src="https://svgshare.com/i/_go.svg" alt="" /> 
-            </div>
+            </div> -->
         </div>
         <form id="form">
             <!-- social media sign up options -->
         <div class ='social'> 
             <div class='title'>Get Started</div>
-
             <div class="question">
                 Already Have an Account? <br>
                 <span class='sign-in'>Log In</span>
             </div> 
-               <div class='sign-up-btns'>
-                <div class="btn-1">
-                    <img src="https://img.icons8.com/color/30/000000/google-logo.png" />
-                     Sign Up
+               <div class='sign-in-btns'>
+                <div class="google-btn">
+                    <img src="images/google-logo.png" width='30px' alt="" />
+                     Goggle
                 </div>
-                <div class="btn-2">
-                    <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" />
-                    Sign Up
+                <div class="facebook-btn">
+                    <img src="images/fb-logo.png" />
+                    Facebook
                 </div>
                 </div>
-
-                
             <div>
                 <div class="or">Or</div>
             </div> 
@@ -96,9 +95,21 @@
             </div>
 
             <!-- submit button -->
-            <div><button id='btn' type="submit">Submit</button></div>
-        
+            <div><button id='btn' class='sign-up-btn' type="submit">Sign Up</button></div>
         </form>
+
+        <!-- modal -->
+        
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <img src="images/green-tick-icon.png" class="modal-tick-icon"alt="">
+
+            <h3 class="modal-title">Success!</h3>
+           <p class='modal-message'> Welcome to <br>yoga dojo. <br>Your journey to a healthier you starts now!</p> 
+          </div>
+          <div class="overlay hidden"></div>
+        
+      
     </div>
 </body>
 </html>
