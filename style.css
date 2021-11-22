@@ -270,6 +270,7 @@ form div i{
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+
     z-index: 10;
 }
 
@@ -331,7 +332,7 @@ form div i{
 /* CLASSES TO MAKE MODAL WORK */
 
 .hidden {
-    /* display: none;   */
+    display: none; 
 }
 
 .overlay {

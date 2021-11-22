@@ -2,6 +2,17 @@
 // eslint-disable-next-line strict
 'use strict';
 
+// global variables for
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const modalClose = document.querySelector('.close-modal');
+// const signUpBtn = document.querySelector('.sign-up-btn')
+
+const toggleModal = () => {
+        modal.classList.toggle('hidden');
+        overlay.classList.toggle('hidden');
+};
+
 // targets all the classes and id from the HTML
 const id = (id) => document.getElementById(id);
 const classes = (classes) => document.getElementsByClassName(classes);
@@ -24,6 +35,17 @@ form.addEventListener('submit', (e) => {
         engine(userName, 0, 'Username cannot be blank');
         engine(email, 1, 'Please enter a valid email address');
         engine(password, 2, 'Password cannot be blank');
+
+        // if all the inputs are valid, the user can submit the form and the modal will pop up with a success message and the form will be reset to blank inputs and icons will be hidden again
+        if (userName.value.trim() !== '' && email.value.trim() !== '' && password.value.trim() !== '') {
+                toggleModal();
+                modalClose.addEventListener('click', toggleModal);
+                overlay.addEventListener('click', toggleModal);
+                form.reset(); // resets the form to blank inputs
+                successIcon[0].style.opacity = '0';
+                successIcon[1].style.opacity = '0';
+                successIcon[2].style.opacity = '0';
+        }
 });
 
 // does different sorts of form validation
