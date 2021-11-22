@@ -10,10 +10,11 @@
 
 body {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
 
     /* background-image */
     background-image:  
-    linear-gradient(to bottom,  #cbcaa5e8, #334d50e1), 
+    linear-gradient(to bottom,  #cbcaa5d8, #334d50e1), 
     url(https://images.unsplash.com/photo-1588561935000-047155e90925?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2574&q=80); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,17 +28,21 @@ body {
 }
 
 h1{
-    margin-top: 0px;
-    /* color: #fff; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0.4em;
+    margin-left: 17rem;
+    color: rgba(255, 255, 255, 0.048);
     font-family: Quicksand, sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bold;  
     line-height: 0.8;
     text-align: center;
-    color: #334d50;  
+    color: #fff;
     height: 0px;
-    padding-left: 15px;
-}
+    
+};
 
 .dojo-text-span{
     padding-left: 28%;
@@ -58,26 +63,39 @@ h1{
     
     width: 600px;
     height: 600px;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     border-radius: 10px 0px 0px 10px;
 
     background-image: 
     linear-gradient(to bottom, rgba(203, 202, 165, 0), rgba(50, 75, 78, 0.158)),
 
     /* YOGA HANDS IMAGE */
-    url(images/yoga.jpg); 
+    /* url(images/yoga.jpg); 
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    
 
     /* YOGA GIRL IMAGE */
     /* url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);
-    background-size: contain;
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-position: 10% 10% 20%;  */
+    background-size: cover;
+    background-repeat: no-repeat; */
+   
 
     /* border-radius: 10px 0 0 10px;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1); */
+}
+
+.flex-girl-img{
+    display: flex;
+    flex-direction: column;
+    background-image: 
+    url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 700px;
+    margin-right: -100px;
+    border-radius: 10px 0 0 10px;
 }
 
 
@@ -332,7 +350,7 @@ form div i{
 /* CLASSES TO MAKE MODAL WORK */
 
 .hidden {
-    display: none; 
+    display: none;  
 }
 
 .overlay {
@@ -358,7 +376,7 @@ form div i{
 }
     form {
         width: 100%;
-        height: 100vh;
+        height: 140vh;
         margin-bottom: -500px;
         border-radius: 0px;
             
@@ -370,6 +388,19 @@ form div i{
         width: 100%;
         border-radius: 0px;
         height: 100vh;
+    }
+    .flex-girl-img{
+        background-image: 
+        url(https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        width: 100%;
+    
+        
+        margin-right: 0px;
+        border-radius: 10px 0 0 10px;
     }
     .btn{
         flex-direction: column;
@@ -398,6 +429,9 @@ form div i{
     form{
         padding-top: -20px;
     }
+    h1{
+        margin-left: 14rem;
+    }
     .modal {
         margin-top: 90%;
         width: 50%;
@@ -405,16 +439,31 @@ form div i{
     }
 }
 
+
   /* modal for screens with a width from 425px */
 
 @media  (max-width:425px) {
     form{
         padding: -20px;
     }
+    h1{
+        margin-left: 14rem;
+        font-size: 1.9rem;
+    }
     .modal {
         margin-top: 120%;
         width: 50%;
         height: 50vh;
+    }
+    .flex-girl-img{
+        width: 100%;
+    }
+}
+
+@media  (max-width:365px) {
+    h1{
+        margin-left: 12rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -422,7 +471,11 @@ form div i{
     form{
          
         padding-top: 140px;
-        height: 105vh;
+        height: 130vh;
+    }
+    h1{
+        margin-left: 10rem;
+        font-size: 1.5rem;
     }
     .google-btn,
     .facebook-btn {
